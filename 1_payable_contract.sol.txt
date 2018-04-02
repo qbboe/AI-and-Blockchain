@@ -1,0 +1,22 @@
+pragma solidity ^0.4.21;
+
+contract contractEB {
+    
+    uint value; 
+    
+    function contractEB(uint _p) {      //constructor
+        value = _p;
+    }
+    
+    function setP(uint _n) payable {    //accept payment
+        value = _n;
+    }
+
+    function setNP(uint _n) {   //doesn't accept payment
+        value = _n;
+    }
+
+    function get () constant returns (uint) {
+        return value; 
+    }
+}
